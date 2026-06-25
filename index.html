@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florería Bella Rosa - Envía Amor en Cada Pétalo</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #d1495b;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Sección de Catálogo */
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .producto-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .producto-card h3 {
+            color: #d1495b;
+            margin-top: 0;
+        }
+
+        .precio {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #2e6f40;
+            margin: 1rem 0;
+        }
+
+        /* Sección del Formulario de Pedido */
+        .formulario-seccion {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-top: 5px solid #d1495b;
+        }
+
+        .formulario-seccion h2 {
+            color: #d1495b;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #d1495b;
+        }
+
+        /* Botón de Envío */
+        .btn-enviar {
+            background-color: #d1495b;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-enviar:hover {
+            background-color: #b33647;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Florería Bella Rosa</h1>
+        <p>Los arreglos más frescos para tus momentos más especiales</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Catálogo de Flores -->
+        <section class="productos">
+            <div class="producto-card">
+                <h3>Ramo Romántico</h3>
+                <p>12 Rosas rojas premium acompañadas de follaje fino.</p>
+                <div class="precio">$35.000</div>
+            </div>
+            <div class="producto-card">
+                <h3>Encanto de Girasoles</h3>
+                <p>Brillantes girasoles para iluminar el día de alguien.</p>
+                <div class="precio">$28.000</div>
+            </div>
+            <div class="producto-card">
+                <h3>Elegancia de Tulipanes</h3>
+                <p>Hermoso florero con tulipanes de colores variados.</p>
+                <div class="precio">$42.000</div>
+            </div>
+        </section>
+
+        <!-- Formulario de Pedido -->
+        <section class="formulario-seccion" id="pedido">
+            <h2>Haz tu Pedido Aquí</h2>
+            <form id="formPedido" onsubmit="procesarPedido(event)">
+                
+                <div class="form-group">
+                    <label for="nombre">Tu Nombre Completo:</label>
+                    <input type="text" id="nombre" required placeholder="Ej. María García">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono de Contacto:</label>
+                    <input type="tel" id="telefono" required placeholder="Ej. +56 9 1234 5678">
+                </div>
+
+                <div class="form-group">
+                    <label for="arreglo">Selecciona tu Arreglo:</label>
+                    <select id="arreglo" required>
+                        <option value="" disabled selected>-- Selecciona una opción --</option>
+                        <option value="Ramo Romántico">Ramo Romántico - $35.000</option>
+                        <option value="Encanto de Girasoles">Encanto de Girasoles - $28.000</option>
+                        <option value="Elegancia de Tulipanes">Elegancia de Tulipanes - $42.000</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección de Entrega:</label>
+                    <input type="text" id="direccion" required placeholder="Calle, Número, Comuna/Ciudad">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Nota o Dedicatoria (Opcional):</label>
+                    <textarea id="mensaje" rows="3" placeholder="Escribe el mensaje que irá en la tarjeta..."></textarea>
+                </div>
+
+                <!-- Botón tipo formulario -->
+                <button type="submit" class="btn-enviar">Confirmar y Solicitar Pedido</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Florería Bella Rosa. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Lógica básica para el envío del formulario -->
+    <script>
+        function procesarPedido(event) {
+            // Evita que la página se recargue al presionar el botón
+            event.preventDefault(); 
+
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const arreglo = document.getElementById('arreglo').value;
+
+            // Simulación de respuesta exitosa
+            alert(¡Gracias, ${nombre}! Hemos recibido tu pedido de: "${arreglo}". Nos pondremos en contacto contigo pronto para coordinar el pago.);
+            
+            // Limpiar el formulario
+            document.getElementById('formPedido').reset();
+        }
+    </script>
+
+</body>
+</html>
