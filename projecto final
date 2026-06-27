@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+	<meta charset="UTF-8">
+	<title>CIBER ACOSO</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+ <header class="encabezado" role="banner">
+ 	<div class="contenedor">
+ 		<a href="https://www.ventas@chapomart.com.mx" class="logo">
+ 			<img src="ciberacoso.jpg" alt="ciberacoso">
+ 		</a>
+ 		<nav role ="navigation">
+ 			<ul>
+ 				<li><a href="#">Nosotros</a></li>
+ 				<li><a href="#">Servicio</a></li>
+ 				<li><a href="#">Contactanos</a></li>
+ 			</ul>
+ 		</nav>
+ 	</div>
+ </header>
+ <div class="presentacion">
+ 	<div class="contenedor">
+ 		<div class="introduccion-presentacion">
+ 			<h1>CIBER ACOSO <br><span>Claveria 54</span></h1>
+ 			<a href="https://enciclovida.mx" class="aprender-mas">Sauces</a>
+ 		</div>
+ 		<img src="ciberacoso.jpg" alt="tienda de flores">
+ 	</div>
+ </div> 
+    <section class="acceso-rapido">
+ 		<div class="contenedor">
+ 			<h2>Acceso rapido</h2>
+              <ul>
+                
+ 				<figure>
+ 					<a href="#"><img src="imagen/icono1.jpg" alt="Nosotros"></a>
+ 					<figcaption><h3><a href="#">Nosotros</a></h3></figcaption>
+ 				</figure>
+ 				<figure>
+ 					<a href="#"><img src="imagen/icono2.jpg" alt="Servicio"></a>
+ 					<figcaption><h3><a href="#">Servicio</a></h3></figcaption>
+ 				</figure>
+ 				<figure>
+ 					<a href="#"><img src="imagen/icono3.jpg" alt="Ubicanos"></a>
+ 					<figcaption><h3><a href="#">Ubicanos</a></h3></figcaption>
+ 				</figure>
+ 				<figure>
+ 					<a href="#"><img src="imagen/icono4.jpg" alt="Contactanos"></a>
+ 					<figcaption><h3><a href="#">Contactanos</a></h3></figcaption>
+ 				</figure>
+                </ul>
+ 		</div>
+ 	</section>  
+    <div class="bloque-contenido">
+ 		<div class="contenedor">
+ 			<main class="articulos" role="main">
+ 				<h2>Ultimas noticias</h2>
+ 				<article>
+ 					<img src="ciberacoso.png">
+ 					<h1><a href="#">¿Que es el ciber acoso?</a></h1>
+ 					<p> <br>¿Qué es el ciberacoso? 📱
+ 					</p>es una clase de bulling o tratamiento basado en insultos,comentarios irientes y faltas de respeto hacia la persona afectada,algunos se meten con algun rasgo fisico , comentarios de su vida social,etc.
+ 				</article>
+ 				<article>
+ 					<img src="Noob.png">
+ 					<h1><a href="#">Consecuencias</a></h1>
+ 					<p><br>Ansiedad social: Pueden exparsir miedo al estar conectado alguna red de internet sintiendose mal con ansiedad.
+                     
+                     Baja autoestima: Te empiezas a creer los insultos. "Soy feo", "no valgo nada".
+                     
+                     Ira y frustración: Ganas de responder igual o de aislarte de todos
+                     
+                      Aislamiento: Dejas de salir, de hablarle a tus amigos por vergüenza.
+                     Pérdida de confianza: Desconfías de todos, hasta de tu mejor amigo.
+                      Rechazo escolar: No quieres ir a la escuela por miedo a que sigan las burlas.
+
+
+ 					</p>
+ 				</article>
+ 				<article>
+ 					<img src="ayuda.png">
+ 					<h1><a href="#">¿Que podemos hacer?</a></h1>
+ 					<p> Para tratar el ciberacoso lo primero es no responderle al agresor porque busca tu reacción, luego guarda evidencia tomando capturas de todo y bloquéalo y repórtalo en la app que uses. Habla con un adulto de confianza como tus papás, un profe o el psicólogo de la escuela, ajusta la privacidad de tus redes para que solo te contacte gente conocida y si te sientes abrumado desconéctate un rato porque tu salud mental va primero. Si ves que le pasa a alguien más, no compartas ni te burles, apóyalo en privado y repórtalo también. Recuerda que no es tu culpa y en CDMX puedes pedir ayuda en la Línea Nacional contra el Ciberacoso 800 00 854 00 o con PoliCiber CDMX.
+ 					</p>
+ 				</article>
+ 			</main>
+            <aside class="complementario" role="complementary">
+         <h2>Proximos eventos</h2>
+         <ul>
+            <li><a href="#">Algunos eventos </a></li>
+            <li><a href="#">Novedades </a></li>
+            <li><a href="#">Cuidados </a></li>
+            <li><a href="#">Expo 2026
